@@ -5,16 +5,19 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import whisky.whisky_journal.common.base.BaseTime;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name = "whisky")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Builder
+@EntityListeners(AuditingEntityListener.class)
 public class Whisky extends BaseTime {
 
     @Id
@@ -34,6 +37,7 @@ public class Whisky extends BaseTime {
     private String imageUrl;
 
     @Embedded
+    @Column(name = "metadata")
     private WhiskyMetaData metadata;
 
 
