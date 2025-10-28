@@ -37,6 +37,7 @@ public class Whisky extends BaseTime {
     private String imageUrl;
 
     @Embedded
+    @Column(name = "metadata")
     private WhiskyMetaData metadata;
 
 
