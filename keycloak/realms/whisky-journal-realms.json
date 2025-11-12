@@ -1,0 +1,20 @@
+{
+  "realm": "whisky-journal",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "whisky-client",
+      "secret": "N7EFZ8OkvdQzPWPUmVchhG1QCU4YIekV",
+      "enabled": true,
+      "redirectUris": [
+        "http://localhost:8080/login/oauth2/code/keycloak"
+      ],
+      "webOrigins": [
+        "*"
+      ],
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "standardFlowEnabled": true
+    }
+  ]
+}
