@@ -1,0 +1,9 @@
+services:
+  keycloak:
+    build: ./keycloak        # Dockerfile이 있는 경로
+    container_name: whisky-keycloak
+    ports:
+      - "8090:8080"          # 로컬 8090 → 컨테이너 8080
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
